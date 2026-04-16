@@ -30,7 +30,7 @@ export function Navbar() {
     };
   }, [menuOpen]);
 
-  const handleNavClick = (_href: string) => {
+  const handleNavClick = () => {
     setMenuOpen(false);
   };
 
@@ -53,7 +53,7 @@ export function Navbar() {
             {/* Logo */}
             <Link
               href="#home"
-              onClick={() => handleNavClick("#home")}
+              onClick={handleNavClick}
               className="group relative z-10"
             >
               <motion.span
@@ -72,7 +72,7 @@ export function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  onClick={() => handleNavClick(link.href)}
+                  onClick={handleNavClick}
                   className="group relative text-sm font-medium text-white/60 transition-colors duration-300 hover:text-white"
                 >
                   {link.label}
@@ -85,7 +85,7 @@ export function Navbar() {
             <div className="flex items-center gap-4">
               <Link
                 href="#contact"
-                onClick={() => handleNavClick("#contact")}
+                onClick={handleNavClick}
                 className="hidden items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:border-[#D4AF37]/50 hover:bg-[#D4AF37]/10 hover:text-[#D4AF37] lg:inline-flex"
               >
                 Let&apos;s Talk

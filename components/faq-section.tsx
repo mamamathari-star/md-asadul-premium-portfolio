@@ -35,7 +35,7 @@ function FaqItem({
     >
       <button
         onClick={onToggle}
-        className="flex w-full items-start justify-between gap-6 py-7 text-left transition-colors duration-200 hover:text-white/90"
+        className="group flex w-full items-start justify-between gap-6 py-7 text-left transition-colors duration-200"
         aria-expanded={isOpen}
       >
         <div className="flex items-start gap-5">

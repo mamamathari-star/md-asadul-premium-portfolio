@@ -62,7 +62,6 @@ export function Hero() {
       />
 
       <motion.div
-        ref={containerRef}
         style={{ y: yTitle, opacity: opacityHero }}
         className="relative z-10 mx-auto max-w-[1320px] px-6 lg:px-10"
       >

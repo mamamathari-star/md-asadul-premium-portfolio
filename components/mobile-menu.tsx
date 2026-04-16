@@ -7,7 +7,7 @@ import { premiumEase } from "@/lib/utils";
 
 interface MobileMenuProps {
   onClose: () => void;
-  onNavClick: (href: string) => void;
+  onNavClick: () => void;
 }
 
 export function MobileMenu({ onNavClick }: MobileMenuProps) {
@@ -47,7 +47,7 @@ export function MobileMenu({ onNavClick }: MobileMenuProps) {
             >
               <Link
                 href={link.href}
-                onClick={() => onNavClick(link.href)}
+                onClick={onNavClick}
                 className="group flex items-baseline justify-between border-b border-white/[0.06] py-5"
               >
                 <span className="text-[clamp(36px,8vw,56px)] font-black uppercase tracking-tight text-white/90 transition-colors duration-300 group-hover:text-[#D4AF37]">
@@ -84,7 +84,7 @@ export function MobileMenu({ onNavClick }: MobileMenuProps) {
           </div>
           <Link
             href="#contact"
-            onClick={() => onNavClick("#contact")}
+            onClick={onNavClick}
             className="rounded-full border border-[#D4AF37]/30 bg-[#D4AF37]/10 px-5 py-2.5 text-sm font-semibold text-[#D4AF37] transition-all duration-300 hover:bg-[#D4AF37]/20"
           >
             Let&apos;s Talk
